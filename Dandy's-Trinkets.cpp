@@ -76,6 +76,11 @@ public:
     {
         return cart;
     }
+    
+     void clearCart() 
+    {
+        cart.clear();
+    }
 };
 
 class Order 
@@ -301,6 +306,8 @@ int main()
 
                         orders.push_back(Order(orderId, totalAmount, cartItems));
                         orderId++;
+                        
+                        cart.clearCart();
 
                         cout << "Checkout successful! Order has been placed.\n\n";
                     }
@@ -343,6 +350,5 @@ int main()
                 cout << "Invalid choice!" << endl;
         }
     }
-    
     return 0;
 }
